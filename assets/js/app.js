@@ -122,6 +122,7 @@ $(document).ready(function() {
     
 });
 
+
 //navbar active deactive function
 function NavbarVisible () {
   if($('.pp-section.active').hasClass('navbar-is-visible')) {
@@ -192,8 +193,9 @@ $(function(){
     $('.main_menu').removeAttr('style');
   }
 
-})
+});
 
+// Mixitup
 
 
 

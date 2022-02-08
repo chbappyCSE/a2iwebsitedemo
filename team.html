@@ -363,25 +363,19 @@
                         <h3>PUBLIC SERVICE CLUSTER</h3>
                     </div>
                     <div class="transform__con__btn__main my-4 text-center">
-                        <div>
-                            <a href="#" class="transform__con__btn">Digital Service Accelerator</a>
-                        </div>
-                        <div>
-                            <a href="#" class="transform__con__btn">Digital Access</a>
-                        </div>
-                        <div>
-                            <a href="#" class="transform__con__btn">Nothi</a>
-                        </div>
-                        <div>
-                            <a href="#" class="transform__con__btn">Land</a>
-                        </div>
-                        <div>
-                            <a href="#" class="transform__con__btn">Judiciary</a>
+                        <div class="top__publications__btn__main">
+                            <ul class="d-flex justify-content-center mixitupbtn">
+                                <li class="li"><button data-filter=".digital_service_accelerator"> Digital Service Accelerator</button></li>
+                                <li class="li"><button data-filter=".digital_access">Digital Access</button></li>
+                                <li class="li"><button data-filter=".nothi">Nothi</button></li>
+                                <li class="li"><button data-filter=".land">Land</button></li>
+                                <li class="li"><button data-filter=".judiciary">Judiciary</but></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="others__members__con__main">
-                        <div class="row pb-5">
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="row pb-5" id="myMixCon">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 digital_service_accelerator mix">
                                 <div class="others__members__con text-center">
                                     <img src="./assets/img/others_team.png" alt="">
                                     <h4>Md. Forhad Zahid Shaikh</h4>
@@ -393,7 +387,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 digital_service_accelerator mix">
                                 <div class="others__members__con text-center">
                                     <img src="./assets/img/others_team_02.png" alt="">
                                     <h4>Ashoke Kumar Biswas</h4>
@@ -405,7 +399,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 pdd__4">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 pdd__4 digital_access mix">
                                 <div class="others__members__con text-center">
                                     <img src="./assets/img/others_team_03.png" alt="">
                                     <h4>Muhammad Younus Ali Sardar</h4>
@@ -417,7 +411,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 mt-4 mt-lg-0">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 mt-4 mt-lg-0 nothi mix">
                                 <div class="others__members__con text-center">
                                     <img src="./assets/img/others_team_04.png" alt="">
                                     <h4>Dr. Mst Shabnam Mostari</h4>
@@ -430,7 +424,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 pt-4">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 pt-4 land mix">
                                 <div class="others__members__con text-center">
                                     <img src="./assets/img/others_team_05.png" alt="">
                                     <h4>Md. Sohedul Islam</h4>
@@ -444,7 +438,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 pt-4">
+                            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 pt-4 judiciary mix">
                                 <div class="others__members__con text-center">
                                     <img src="./assets/img/others_team_06.png" alt="">
                                     <h4>Md. Golam Sarwar</h4>
@@ -595,6 +589,9 @@
         
         <!-- Slick -->
         <script src="./assets/js/slick.min.js"></script>
+
+        <!-- Mixitup Data Filter -->
+        <script src="./assets/js/mixitup.min.js"></script>
         
         
         <!-- Own JS -->
@@ -603,6 +600,8 @@
             $(function(){
                 $('.main_menu').addClass('navbar-visible');
             });
+            var config = document.querySelector('#myMixCon');
+            var mixer = mixitup(config);
         </script>
 
     </body>

@@ -352,20 +352,20 @@
                         <p class="pt-2">Here are some of the Top Publications</p>
                     </div>
                     <div class="top__publications__btn__main">
-                        <ul class=" d-flex justify-content-center">
-                            <li class="li"><button>All</button></li>
-                            <li class="li"><button>Digital Equity</button></li>
-                            <li class="li"><button>a2i Innovation Lab</button></li>
-                            <li class="li"><button>Impact Studies</button></li>
-                            <li class="li"><button>Policies & Strategies</but></li>
-                            <li class="li"><button>Infographics</button></li>
-                            <li class="li"><button>Results Brief</button></li>
+                        <ul class="d-flex justify-content-center mixitupbtn">
+                            <li class="li"><button data-filter="all">All</button></li>
+                            <li class="li"><button data-filter=".digital_equity_filter">Digital Equity</button></li>
+                            <li class="li"><button data-filter=".a2i_inno_lab_filter">a2i Innovation Lab</button></li>
+                            <li class="li"><button data-filter=".impact_stu_filter">Impact Studies</button></li>
+                            <li class="li"><button data-filter=".politics_filter">Policies & Strategies</but></li>
+                            <li class="li"><button data-filter=".infographic_filter">Infographics</button></li>
+                            <li class="li"><button data-filter=".result_filter">Results Brief</button></li>
                         </ul>
                     </div>
                     <div class="publication__con__main py-3">
                         <div class="row">
-                            <div class="col-xl-8 col-lg-8 col-md-8 col-12 col-sm-12">
-                                <div class="row">
+                            <div class="col-xl-8 col-lg-8 col-md-8 col-12 col-sm-12" id="myMixCon">
+                                <div class="row mix result_filter politics_filter">
                                     <div class="col-4">
                                         <div class="publication__img  __storys">
                                             <img src="./assets/img/publication_img.png" class="img-fluid w-100" alt="">
@@ -390,15 +390,16 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
                                     </div>
+                                </div>
+
+                                <div class="row mix digital_equity_filter politics_filter result_filter infographic_filter">
                                     <div class="col-4">
                                         <div class="publication__img  __storys">
                                             <img src="./assets/img/relevent_blog_item_3.jpg" class="img-fluid w-100" alt="">
                                         </div>
                                     </div>
                                     <div class="col-8">
-                                        
                                         <div class="hero__con publish__con">
                                             <h4>a2i Blog</h4>
                                             <p>An adaptive national system: what can be done to help the people of Bangladesh navigate future jobs and skills?</p>
@@ -417,8 +418,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
                                     </div>
+                                </div>
+
+                                <div class="row mix a2i_inno_lab_filter infographic_filter impact_stu_filter">
                                     <div class="col-4">
                                         <div class="publication__img  __storys">
                                             <img src="./assets/img/relevent_blog_item_2.jpg" class="img-fluid w-100" alt="">
@@ -444,10 +447,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                                 <div class="search__bar__con">
                                     <h4>Search</h4>
@@ -557,6 +560,9 @@
         
         <!-- Slick -->
         <script src="./assets/js/venobox.min.js"></script>
+
+        <!-- Mixitup Data Filter -->
+        <script src="./assets/js/mixitup.min.js"></script>
         
         <!-- Own JS -->
         <script src="./assets/js/app.js"></script>
@@ -565,6 +571,8 @@
             $(function(){
                 $('.main_menu').addClass('navbar-visible');
             });
+            var config = document.querySelector('#myMixCon');
+            var mixer = mixitup(config);
         </script>
     </body>
 </html>

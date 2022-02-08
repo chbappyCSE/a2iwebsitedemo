@@ -1442,33 +1442,23 @@ h1, h2, h3, h4, h5, h6, p, span {
 .top__publications {
 	padding-top: 30px;
 }
-.top__publications__btn__main {
-	/* padding: 30px 0; */
-}
 .top__publications__btn__main ul {
-	/* flex-wrap: wrap; */
+	flex-wrap: wrap;
 }
 .top__publications__btn__main ul li {
-	/* padding: 15px; */
 	margin: 10px 0;
 }
 .top__publications__btn__main ul li button:hover {
 	color: #fff;
-	/* height: 35px;
-	min-width: 180px; */
 	background: #0A9444;
 	border-radius: 30px;
-	line-height: 35px;
 }
 .top__publications__btn__main ul li button {
-	/* display: block; */
 	background: transparent;
-	text-align: center;
 	transition: .3s;
-	height: 35px;
-	width: 180px;
-	line-height: 35px;
+	padding: 10px 15px;
 	border: none;
+	margin: 0 10px;
 }
 .hero__con.publish__con {
 	margin: 0 0 30px;
